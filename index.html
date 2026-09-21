@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para ti · 21.09.2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- BACKGROUND -->
+    <div class="background">
+        <div class="background__noise"></div>
+        <div class="background__stars"></div>
+
+        <div class="ambient ambient--one"></div>
+        <div class="ambient ambient--two"></div>
+        <div class="ambient ambient--three"></div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress">
+        <div class="progress__bar" id="progressBar"></div>
+    </div>
+
+
+    <!-- =====================================================
+         SCENE 01 — INTRO
+    ====================================================== -->
+
+    <main>
+
+        <section class="scene scene--intro active" id="intro">
+
+            <div class="scene__counter">
+                01 / 05
+            </div>
+
+            <div class="scene__system">
+                21 · 09 · 2026
+            </div>
+
+            <div class="intro-content">
+
+                <div class="eyebrow">
+                    tengo algo para ti
+                </div>
+
+                <h1>
+                    Hoy quería<br>
+                    <em>regalarte algo.</em>
+                </h1>
+
+                <p>
+                    No es exactamente un regalo.<br>
+                    Es algo que hice pensando en ti.
+                </p>
+
+                <button class="main-button" id="startBtn">
+                    <span>Descubrir</span>
+                    <span class="main-button__arrow">→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SCENE 02 — FLOWER
+        ====================================================== -->
+
+        <section class="scene scene--garden" id="garden">
+
+            <div class="scene__counter">
+                02 / 05
+            </div>
+
+            <div class="garden-label">
+                algo está creciendo
+            </div>
+
+            <div class="garden-content">
+
+                <div class="typewriter" id="typeText"></div>
+
+                <div class="flower-wrapper">
+
+                    <svg
+                        id="sunflower"
+                        class="sunflower"
+                        viewBox="0 0 500 700"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+
+                        <defs>
+
+                            <linearGradient
+                                id="petalGradient"
+                                x1="0"
+                                y1="0"
+                                x2="0"
+                                y2="1"
+                            >
+                                <stop offset="0%" stop-color="#fff09a"/>
+                                <stop offset="35%" stop-color="#f6c945"/>
+                                <stop offset="100%" stop-color="#d99b12"/>
+                            </linearGradient>
+
+                            <linearGradient
+                                id="stemGradient"
+                                x1="0"
+                                y1="0"
+                                x2="1"
+                                y2="0"
+                            >
+                                <stop offset="0%" stop-color="#30491d"/>
+                                <stop offset="50%" stop-color="#709345"/>
+                                <stop offset="100%" stop-color="#30491d"/>
+                            </linearGradient>
+
+                            <linearGradient
+                                id="leafGradient"
+                                x1="0"
+                                y1="0"
+                                x2="1"
+                                y2="1"
+                            >
+                                <stop offset="0%" stop-color="#709345"/>
+                                <stop offset="100%" stop-color="#30491d"/>
+                            </linearGradient>
+
+                            <radialGradient
+                                id="centerGradient"
+                                cx="45%"
+                                cy="40%"
+                            >
+                                <stop offset="0%" stop-color="#6d4a14"/>
+                                <stop offset="65%" stop-color="#3d280b"/>
+                                <stop offset="100%" stop-color="#1e1407"/>
+                            </radialGradient>
+
+                            <filter id="softShadow">
+                                <feDropShadow
+                                    dx="0"
+                                    dy="15"
+                                    stdDeviation="14"
+                                    flood-color="#000000"
+                                    flood-opacity=".45"
+                                />
+                            </filter>
+
+                        </defs>
+
+
+                        <!-- STEM -->
+
+                        <path
+                            class="flower__stem"
+                            d="M250 665 C248 570 251 470 250 300"
+                            pathLength="1"
+                        />
+
+
+                        <!-- LEAVES -->
+
+                        <path
+                            class="flower__leaf flower__leaf--left"
+                            d="M250 505 C210 470 145 475 110 520 C160 535 215 530 250 505Z"
+                        />
+
+                        <path
+                            class="flower__leaf flower__leaf--right"
+                            d="M250 555 C290 515 350 515 392 550 C345 570 295 570 250 555Z"
+                        />
+
+
+                        <!-- PETALS -->
+
+                        <g id="flowerPetals">
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                            <ellipse
+                                class="petal"
+                                cx="250"
+                                cy="175"
+                                rx="42"
+                                ry="115"
+                            />
+
+                        </g>
+
+
+                        <!-- FLOWER CENTER -->
+
+                        <circle
+                            class="flower__center-shadow"
+                            cx="250"
+                            cy="250"
+                            r="82"
+                        />
+
+                        <circle
+                            class="flower__center"
+                            cx="250"
+                            cy="250"
+                            r="76"
+                            fill="url(#centerGradient)"
+                        />
+
+                        <circle
+                            class="flower__highlight"
+                            cx="225"
+                            cy="225"
+                            r="9"
+                        />
+
+                    </svg>
+
+                </div>
+
+                <div class="garden-hint">
+                    <span></span>
+                    haz clic sobre la flor
+                    <span></span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SCENE 03 — PHOTO
+        ====================================================== -->
+
+        <section class="scene scene--photo" id="photoScene">
+
+            <div class="scene__counter">
+                03 / 05
+            </div>
+
+            <div class="photo-label">
+                un momento guardado
+            </div>
+
+            <div class="photo-content">
+
+                <div class="photo-frame" id="photoFrame">
+
+                    <div class="photo-loading" id="photoLoading">
+                        ingresa nuestra fotografía
+                    </div>
+
+                    <img
+                        id="couplePhoto"
+                        class="couple-photo"
+                        src="assets/nuestra-foto.jpg"
+                        alt="Un momento especial juntos"
+                    >
+
+                    <div class="photo-overlay"></div>
+                    <div class="photo-vignette"></div>
+                    <div class="photo-grain"></div>
+                    <div class="photo-light"></div>
+
+                    <div class="photo-corner photo-corner--tl"></div>
+                    <div class="photo-corner photo-corner--tr"></div>
+                    <div class="photo-corner photo-corner--bl"></div>
+                    <div class="photo-corner photo-corner--br"></div>
+
+                    <div class="photo-date">
+                        21 · 09 · 2026
+                    </div>
+
+                </div>
+
+
+                <div class="photo-caption">
+
+                    <h2>
+                        Hay momentos<br>
+                        que uno quisiera<br>
+                        <em>guardar para siempre.</em>
+                    </h2>
+
+                    <p>
+                        Y este es uno de ellos.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="minimal-button"
+                    id="photoContinueBtn"
+                >
+                    continuar
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SCENE 04 — MESSAGE
+        ====================================================== -->
+
+        <section class="scene scene--message" id="message">
+
+            <div class="scene__counter">
+                04 / 05
+            </div>
+
+            <div class="message-label">
+                una pequeña confesión
+            </div>
+
+            <div class="message-content">
+
+                <div class="message-eyebrow">
+                    pensé en hacerte un regalo
+                </div>
+
+                <h2>
+                    No encontré una flor<br>
+                    que fuera suficiente.
+                </h2>
+
+                <div class="message-divider">
+                    <span></span>
+                    ✦
+                    <span></span>
+                </div>
+
+                <p class="message-lead">
+                    Así que decidí hacer una.
+                </p>
+
+                <p class="message-body">
+                    Quizás todavía estamos descubriendo
+                    qué somos, pero me gusta cada momento
+                    que compartimos.
+                </p>
+
+                <div class="message-date">
+                    21 · SEP · 2026
+                </div>
+
+                <button
+                    class="minimal-button"
+                    id="continueBtn"
+                >
+                    hay algo más
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SCENE 05 — FINAL
+        ====================================================== -->
+
+        <section class="scene scene--final" id="final">
+
+            <div class="scene__counter">
+                05 / 05
+            </div>
+
+            <div class="final-label">
+                una última cosa
+            </div>
+
+            <div class="final-content">
+
+                <div class="final-eyebrow">
+                    si me dejas elegir...
+                </div>
+
+                <h2>
+                    Me gustaría seguir<br>
+                    <em>descubriendo esto contigo.</em>
+                </h2>
+
+                <p class="final-text">
+                    Así que tengo una pequeña propuesta.
+                </p>
+
+
+                <div class="invitation">
+
+                    <div class="invitation-item">
+                        <span>compañía</span>
+                        <strong>tú y yo</strong>
+                    </div>
+
+                    <div class="invitation-item">
+                        <span>lugar</span>
+                        <strong>una sorpresa</strong>
+                    </div>
+
+                    <div class="invitation-item">
+                        <span>fecha</span>
+                        <strong>por decidir</strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="final-button"
+                    id="yesBtn"
+                >
+                    <span>acepto la salida</span>
+                    <span>🌻</span>
+                </button>
+
+
+                <div
+                    class="final-answer"
+                    id="answer"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FALLING PETALS -->
+
+    <div
+        class="falling-petals"
+        id="petals"
+    ></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
